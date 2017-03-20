@@ -1,0 +1,17 @@
+{
+  "name": "tmdb-api",
+  "version": "1.0.0",
+  "description": "My API isn't done yet. Figuring out how to make an detailpage.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concat-stream": "^1.6.0",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
+}
