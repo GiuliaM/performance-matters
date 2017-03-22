@@ -1,10 +1,19 @@
-<% include partials/head.ejs %>
+<% include partials/head %>
 
-<h1>Movies</h1>
-<% for (var i=0; i < movies.length; i++){ %<a href="/movies/<%= movies[i].id%>">
-     <article>
-        <h1 class="title"><%=data.results[i].title%></h1>
-        <p class="overview"><%=data.results[i].overview%></p>
-     </article>
- <%}%>
+<h1>Hoi</h1>
 
+<% if (movies) { %>
+  <% movies.forEach(function(movie) { %>
+
+    <article>
+        <h1 class="title"><%=movie.original_title%></h1>
+        <figure>
+            <img src="<%= url + movie.poster_path %>">
+        </figure>
+    </article>
+    <% }) %>
+
+  <% } %>
+
+
+<% include partials/foot %>
