@@ -1,5 +1,10 @@
-<% include partials/head %>
+<% include partials/head.ejs %>
 
-    <h1>Hoi</h1>
+<h1>Movies</h1>
+<% for (var i=0; i < movies.length; i++){ %<a href="/movies/<%= movies[i].id%>">
+     <article>
+        <h1 class="title"><%=data.results[i].title%></h1>
+        <p class="overview"><%=data.results[i].overview%></p>
+     </article>
+ <%}%>
 
-<% include partials/foot %>

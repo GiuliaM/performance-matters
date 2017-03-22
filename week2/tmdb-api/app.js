@@ -5,8 +5,6 @@ var express = require('express')
 var app = express()
 var concat = require('concat-stream') //adds all the data from a stream and calls callback with the result https://www.npmjs.com/package/concat-stream
 
-
-
 //linking to the .env file to get the hidden key and url
 var url = process.env.searchApi;
 var apiKey = process.env.apiKey;
@@ -15,14 +13,23 @@ var apiKey = process.env.apiKey;
 //https://www.npmjs.com/package/dotenv
 require('dotenv').config()
 
+app.use(express.static('static'))
 
 //movieRouter = require('./routes/movies');
 
 /*   View    */
 app.set('view engine', 'ejs')
+app.set('views', 'views')
 
 /*   index    */
-app.get('/search/:query?', function (req, res) {
+app.get('/movies', function (req, res) {
+    request(url, function(error, response, body){
+            var data = JSON.parse(body)
+            res.render('index.ejs', {movies: data})
+        });
+})
+
+//app.get('/search/:query?', function (req, res) {
 //    var query = req.params.query;
 //
 //    function callback{
@@ -31,9 +38,13 @@ app.get('/search/:query?', function (req, res) {
 })
 
 
-var data = require("./results.js")
-console.log(data)
+//var data = require("./results.js")
+//console.log(data)
 /*   Npm server    */
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+//app.listen(3000, function () {
+//  console.log('Example app listening on port 3000!')
+//})
+
+var server = app.listen(3000, function(){
+    console.log('server is running on port 3004')
 })
