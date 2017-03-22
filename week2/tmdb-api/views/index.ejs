@@ -4,16 +4,17 @@
 
 <% if (movies) { %>
   <% movies.forEach(function(movie) { %>
-
-    <article>
-        <h1 class="title"><%=movie.original_title%></h1>
-        <figure>
-            <img src="<%= url + movie.poster_path %>">
-        </figure>
-    </article>
+    <a href="<%=movie.id%>">
+        <article class="searchResult">
+            <h1><%=movie.title%></h1>
+            <figure>
+                <img src="<%= url + movie.poster_path %>">
+            </figure>
+        </article>
+    </a>
     <% }) %>
 
-  <% } %>
+<% } %>
 
 
 <% include partials/foot %>

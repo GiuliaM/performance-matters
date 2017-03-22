@@ -11,6 +11,7 @@ var request = require('request')
 //linking to the .env file to get the hidden key and url
 var url = process.env.searchApi;
 var posterUrl = 'http://image.tmdb.org/t/p/w500'
+var detailUrl = 'https://api.themoviedb.org/3/movie/'
 var apiKey = process.env.apiKey;
 
 app.use(express.static('static'))
@@ -24,14 +25,25 @@ app.set('views', 'views')
 app.get('/', function (req, res) {
     console.log(url);
     request(url, function(error, response, body){
-            console.log(error);
-            console.log(response);
-
             var data = JSON.parse(body);
 
             res.render('index.ejs', {
                         movies: data.results,
                         url: posterUrl
+                     })
+        });
+});
+
+//Zowel de tekst als poster worden niet goed geladen
+app.get('/:id', function (req, res) {
+    console.log(url);
+    request(url, + req.params.id, function(error, response, body){
+
+            var data = JSON.parse(body);
+
+            res.render('details.ejs', {
+                        movie: data,
+                        url: detailUrl
                      })
         });
 });

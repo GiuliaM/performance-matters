@@ -1,11 +1,14 @@
-<% include partials/head.ejs %>
-<article>
-    <header>
+<% include partials/head %>
 
-    </header>
-
-
-</article>
+<!--Zowel de tekst als poster worden niet goed geladen-->
+        <article>
+            <h1 class="title"><%=movie.title%></h1>
+            <figure>
+                <img src="<%= url + movie.poster_path + process.env.apiKey %>">
+            </figure>
+            <p><%=movie.overview%></p>
+        </article>
 
 
 <% include partials/foot %>
+
