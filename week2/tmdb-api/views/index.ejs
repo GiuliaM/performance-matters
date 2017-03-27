@@ -2,19 +2,18 @@
 
 <h1>Hoi</h1>
 
-<% if (movies) { %>
-  <% movies.forEach(function(movie) { %>
-    <a href="<%=movie.id%>">
-        <article class="searchResult">
-            <h1><%=movie.title%></h1>
-            <figure>
+<article id="queryResult">
+    <% if (movies) { %>
+      <% movies.forEach(function(movie) { %>
+         <div class="searchResult">
+           <a href="<%=movie.id%>">
+                <h1><%=movie.title%></h1>
                 <img src="<%= url + movie.poster_path %>">
-            </figure>
-        </article>
-    </a>
-    <% }) %>
+            </a>
+        </div>
+        <% }) %>
 
-<% } %>
-
+    <% } %>
+</article>
 
 <% include partials/foot %>

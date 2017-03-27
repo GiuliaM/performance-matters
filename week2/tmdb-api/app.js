@@ -27,10 +27,10 @@ app.get('/', function (req, res) {
     request(url, function(error, response, body){
             var data = JSON.parse(body);
 
-            res.render('index.ejs', {
-                        movies: data.results,
-                        url: posterUrl
-                     })
+            res.render('index', {
+                movies: data.results,
+                url: posterUrl
+             });
         });
 });
 
@@ -52,3 +52,5 @@ app.get('/:id', function (req, res) {
 app.listen(3000, function(){
     console.log('server is running on port 3000')
 })
+
+
