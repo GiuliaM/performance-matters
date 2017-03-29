@@ -103,7 +103,7 @@ div {
 }
 
 /* Userquery */
-button[type="submit"] {
+button[type="submit"], .button {
     height: 2.7em;
     background: none;
     border: 0.2em white solid;
@@ -205,6 +205,8 @@ input[name="emotion"]:checked + label svg {
     background-color: black;
     border: none;
     justify-content: flex-start;
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
 .detailResult img{
@@ -236,10 +238,26 @@ input[name="emotion"]:checked + label svg {
     margin-top: 0;
 }
 
-.detailBlok a {
-    color: #1EB4F4;
+.detailBlok a, .overview {
+    color: white;
     margin-bottom: 0;
     font-size: 1em;
+    text-decoration: none;
+}
+
+.overview{
+    width: 30%;
+}
+
+.buttonDiv{
+    margin-bottom: -1em;
+    margin-top: 1em;
+}
+
+.button{
+    align-self: flex-end;
+    margin-bottom: -2em;
+    width: 30%;
 }
 
 @media (min-width: 42em){

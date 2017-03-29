@@ -6,7 +6,8 @@
          <div class="searchResult">
            <a href="/movies/<%=movie.id%>">
                 <h1><%=movie.title%></h1>
-                <img src="<%= url + movie.poster_path %>">
+
+                <img src="<%=url + movie.poster_path %>">
             </a>
         </div>
         <% }) %>
@@ -15,3 +16,9 @@
 </article>
 
 <% include partials/foot %>
+
+
+
+
+
+

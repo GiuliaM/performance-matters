@@ -39,7 +39,6 @@ app.get('/movies/:id', function (req, res) {
     request(detailUrl + req.params.id + apiKey, function(error, response, body){
             var data = JSON.parse(body);
 
-        console.log('data', data);
             res.render('details.ejs', {
                         movie: data,
                         url: posterUrl
