@@ -238,7 +238,7 @@ input[name="emotion"]:checked + label svg {
     margin-top: 0;
 }
 
-.detailBlok a, .overview {
+.overview {
     color: white;
     margin-bottom: 0;
     font-size: 1em;
@@ -261,6 +261,18 @@ input[name="emotion"]:checked + label svg {
 }
 
 .intro{
+    margin-left: 1em;
+}
+
+.detailBlok a {
+    color: #1EB4F4;
+    text-decoration: underline;
+    font-size: 1em;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+#demo{
     margin-left: 1em;
 }
 

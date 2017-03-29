@@ -14,7 +14,7 @@ var posterUrl = 'http://image.tmdb.org/t/p/w500'
 var detailUrl = 'https://api.themoviedb.org/3/movie/'
 var apiKey = process.env.apiKey;
 
-app.use(express.static('static'))
+app.use(express.static('./'))
 
 
 /*   View    */
@@ -23,7 +23,6 @@ app.set('views', 'views')
 
 /*   index    */
 app.get('/movies', function (req, res) {
-    console.log(url);
     request(url, function(error, response, body){
             var data = JSON.parse(body);
 

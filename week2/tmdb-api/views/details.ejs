@@ -1,32 +1,31 @@
 <% include partials/head %>
 
 <!--Zowel de tekst als poster worden niet goed geladen-->
-<section>
-    <article class="showDetails">
-        <div class="buttonDiv">
-            <button class="button"><a href="/movies" class="overview"> &#8592; Go back to overview</a></button>
-        </div>
-       <div class="detailResult">
-
-            <img src="<%= url + movie.poster_path + process.env.apiKey %>">
-
-            <div class="detailBlok">
-                <h1 class="title"><%=movie.title%></h1>
-                <p><%=movie.overview%></p>
-                <h2>Summary</h2>
-                <p><%=movie.overview%></p>
-                <h2>Release</h2>
-                <p><%=movie.release_date%></p>
-                <h2>Today's date</h2>
-                <p id="date"></p>
-                <h2>Grade</h2>
-                <p><%=movie.vote_average%></p>
-                <a href="/movies"> Go back to overview</a>
+    <section>
+        <article class="showDetails">
+            <div class="buttonDiv">
+                <button class="button"><a href="/movies" class="overview"> &#8592; Go back to overview</a></button>
             </div>
-        </div>
-    </article>
-</section>
+           <div class="detailResult">
 
-<% include partials/foot %>
+                <img src="<%= url + movie.poster_path + process.env.apiKey %>">
+
+                <div class="detailBlok">
+                    <h1 class="title"><%=movie.title%></h1>
+                    <p><%=movie.overview%></p>
+                    <h2>Summary</h2>
+                    <p><%=movie.overview%></p>
+                    <h2>Release</h2>
+                    <p><%=movie.release_date%></p>
+                    <h2>Grade</h2>
+                    <p><%=movie.vote_average%></p>
+                    <a href="/movies"> Go back to overview</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    </body>
+</html>
 
 

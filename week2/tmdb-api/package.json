@@ -16,6 +16,6 @@
     "request": "^2.81.0"
   },
   "devDependencies": {
-
+    "browserify": "^14.1.0"
   }
 }
