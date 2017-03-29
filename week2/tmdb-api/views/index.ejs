@@ -1,12 +1,10 @@
 <% include partials/head %>
 
-<h1>Hoi</h1>
-
 <article id="queryResult">
     <% if (movies) { %>
       <% movies.forEach(function(movie) { %>
          <div class="searchResult">
-           <a href="<%=movie.id%>">
+           <a href="/movies/<%=movie.id%>">
                 <h1><%=movie.title%></h1>
                 <img src="<%= url + movie.poster_path %>">
             </a>

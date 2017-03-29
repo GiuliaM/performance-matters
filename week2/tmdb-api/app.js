@@ -22,7 +22,7 @@ app.set('view engine', 'ejs')
 app.set('views', 'views')
 
 /*   index    */
-app.get('/', function (req, res) {
+app.get('/movies', function (req, res) {
     console.log(url);
     request(url, function(error, response, body){
             var data = JSON.parse(body);
@@ -35,15 +35,14 @@ app.get('/', function (req, res) {
 });
 
 //Zowel de tekst als poster worden niet goed geladen
-app.get('/:id', function (req, res) {
-    console.log(url);
-    request(url, + req.params.id, function(error, response, body){
-
+app.get('/movies/:id', function (req, res) {
+    request(detailUrl + req.params.id + apiKey, function(error, response, body){
             var data = JSON.parse(body);
 
+        console.log('data', data);
             res.render('details.ejs', {
                         movie: data,
-                        url: detailUrl
+                        url: posterUrl
                      })
         });
 });

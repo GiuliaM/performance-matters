@@ -197,7 +197,7 @@ input[name="emotion"]:checked + label svg {
 .detailResult {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
     align-content: space-around;
 /*    align-items: center;*/
@@ -208,15 +208,16 @@ input[name="emotion"]:checked + label svg {
 }
 
 .detailResult img{
-    max-height: 30em;
+    max-height: 32em;
 }
 
 .detailResult .detailBlok{
     padding-left: 2em;
-    width: 50%;
+    padding-right: 2em;
+    width: 100%;
 }
 
-#showDetails {
+.showDetails {
     width: 80%;
 }
 
@@ -241,11 +242,18 @@ input[name="emotion"]:checked + label svg {
     font-size: 1em;
 }
 
+@media (min-width: 42em){
+    .detailResult{
+       flex-direction: row;
+    }
 
-/*
-section: nth-child(2){
-    background-color: #F58F29;
+    .detailResult .detailBlok{
+    width: 50%;
+    }
 }
-*/
 
-/* EMOCHECK IS VOOR DE RADIO VAN DE EMOJI */
+@media (min-width: 65em) {
+    .showDetails {
+        width: 60%;
+    }
+}

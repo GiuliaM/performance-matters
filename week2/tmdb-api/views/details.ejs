@@ -1,14 +1,26 @@
 <% include partials/head %>
 
 <!--Zowel de tekst als poster worden niet goed geladen-->
-        <article>
-            <h1 class="title"><%=movie.title%></h1>
-            <figure>
-                <img src="<%= url + movie.poster_path + process.env.apiKey %>">
-            </figure>
-            <p><%=movie.overview%></p>
-        </article>
+<section>
+    <article class="showDetails">
+       <div class="detailResult">
+            <img src="<%= url + movie.poster_path + process.env.apiKey %>">
 
+            <div class="detailBlok">
+                <h1 class="title"><%=movie.title%></h1>
+                <p><%=movie.overview%></p>
+                <h2>Summary</h2>
+                <p><%=movie.overview%></p>
+                <h2>Budget</h2>
+                <p><%=movie.budget%></p>
+                <h2>Grade</h2>
+                <p><%=movie.vote_average%></p>
+                <a href="/movies"> Go back to overview</a>
+            </div>
+        </div>
+    </article>
+</section>
 
 <% include partials/foot %>
+
 
