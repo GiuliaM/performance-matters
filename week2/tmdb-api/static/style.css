@@ -103,7 +103,7 @@ div {
 }
 
 /* Userquery */
-button[type="submit"], .button {
+button[type="submit"], .button, .intro {
     height: 2.7em;
     background: none;
     border: 0.2em white solid;
@@ -258,6 +258,10 @@ input[name="emotion"]:checked + label svg {
     align-self: flex-end;
     margin-bottom: -2em;
     width: 30%;
+}
+
+.intro{
+    margin-left: 1em;
 }
 
 @media (min-width: 42em){

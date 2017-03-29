@@ -1,5 +1,9 @@
 <% include partials/head %>
+<section>
+   <p>What is your name?<button class="intro" onclick="myFunction()"> Tell me!</button></p>
+   <p id="demo"></p>
 
+</section>
 <article id="queryResult">
     <% if (movies) { %>
       <% movies.forEach(function(movie) { %>
