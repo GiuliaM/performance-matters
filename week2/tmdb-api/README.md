@@ -1,17 +1,13 @@
-My API isn't done yet. Figuring out how to make an detailpage.
+### Moodvie: a overview of movies
 
-https://giuliam.github.io/wafs/opdracht6-api/?#start
+This project is about displaying movies from the Movie Database API.
 
+For starters I put the search query on John, only displaying the movies with the name John in the title.
+By clicking on the movie you will get the details from this movie.
 
-<h1> Object Model </h1>
+This whole project is build in server-side, with a few client-side javascripts. I'm going to bundle these client-side script with [Browserify](https://www.npmjs.com/package/browserify).
 
-<img src="img/ObjectModel.png" alt="Object Model of API"/>
-
-<h1> Flow Chart</h1>
-
-<img src="img/flowchart.png" alt="Flowchart of API"/>
-
-
+---
 
 ## Get started
 First clone the repo:
@@ -29,7 +25,7 @@ npm install
 In my .env file I put my api key and search query like this:
 ```javascript
 apiKey=?api_key=[ACTUALKEY];
-searchApi=https://api.themoviedb.org/3/search/movie[apiKey];
+searchApi=https://api.themoviedb.org/3/search/movie[apiKey]&query=john;
 
 ```
 
@@ -47,3 +43,8 @@ or if you use node
 node app.js
 ```
 
+## Audit
+Before adding any client-side JavaScript I did a speed check
+<img src="img/StartStatus.png" alt="speed without client-side JavaScript" height="400px">
+
+After that the two client-side JavaScripts
