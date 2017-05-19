@@ -16,7 +16,7 @@ This whole project is build in server-side, with a few client-side javascripts. 
 - Show more movies (now 20)
 - 404 handling
 
-<img src="img/404h.png" alt="404 page"/>
+<img src="img/404h.png" alt="404 page" width="500px"/>
 
 ---
 
@@ -57,19 +57,19 @@ node app.js
 ## Audit
 Before adding any client-side JavaScript I did two speed checks:
 
-**Regular 2G (300ms, 250Kb/s, 50Kb/s)**
-**Status**
-Transferred: 1.4 MB
-Finish: 49.91 s
-DOMContentLoaded: 1.07 s
-Load: 49.92 s
+**Regular 2G (300ms, 250Kb/s, 50Kb/s)**<br>
+**Status**<br>
+Transferred: 1.4 MB<br>
+Finish: 49.91 s<br>
+DOMContentLoaded: 1.07 s<br>
+Load: 49.92 s<br>
 
-**Regular 4G (20ms, 4.0Mb/s, 3.0Mb/s)**
-**Status**
-Transferred: 1.4 MB
-Finish: 4.74 s
-DOMContentLoaded: 704 ms
-Load: 3.71 s
+**Regular 4G (20ms, 4.0Mb/s, 3.0Mb/s)**<br>
+**Status**<br>
+Transferred: 1.4 MB<br>
+Finish: 4.74 s<br>
+DOMContentLoaded: 704 ms<br>
+Load: 3.71 s<br>
 
 <img src="img/nojs2g.png" alt="speed without client-side JavaScript 2G" height="300px">
 <img src="img/nojs2g.png" alt="speed without client-side JavaScript 2G" height="300px">
