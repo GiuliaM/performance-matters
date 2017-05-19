@@ -57,15 +57,15 @@ node app.js
 ## Audit
 Before adding any client-side JavaScript I did two speed checks:
 
-#### Regular 2G (300ms, 250Kb/s, 50Kb/s)
-*Status*
+**Regular 2G (300ms, 250Kb/s, 50Kb/s)**
+**Status**
 Transferred: 1.4 MB
 Finish: 49.91 s
 DOMContentLoaded: 1.07 s
 Load: 49.92 s
 
-#### Regular 4G (20ms, 4.0Mb/s, 3.0Mb/s)
-*Status*
+**Regular 4G (20ms, 4.0Mb/s, 3.0Mb/s)**
+**Status**
 Transferred: 1.4 MB
 Finish: 4.74 s
 DOMContentLoaded: 704 ms
