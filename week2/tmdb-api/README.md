@@ -74,6 +74,10 @@ Load: 3.71 s<br>
 <img src="img/nojs2g.png" alt="speed without client-side JavaScript 2G" height="300px">
 <img src="img/nojs4g.png" alt="speed without client-side JavaScript 4G" height="300px">
 
+I also did a check with [lighthouse](https://developers.google.com/web/tools/lighthouse/):
+<img src="img/lhnojs.png" alt="Lighthouse test no javascript" height="300px">
+
+---
 I added the two client-side JavaScripts:
 
 **Regular 2G (300ms, 250Kb/s, 50Kb/s)**<br>
@@ -93,6 +97,9 @@ Load: 3.76 s<br>
 <img src="img/2js2g.png" alt="speed with client-side JavaScript 2G" height="300px">
 <img src="img/2js4g.png" alt="speed with client-side JavaScript 4G" height="300px">
 
+I also checked [lighthouse](https://developers.google.com/web/tools/lighthouse/) again:
+<img src="img/lh2js.png" alt="Lighthouse test two javascript" height="300px">
+---
 Then I bundled the client-side JavaScripts with Browserify stored in bundle.js
 
 **Regular 2G (300ms, 250Kb/s, 50Kb/s)**<br>
@@ -111,3 +118,7 @@ Load: 4.07 s<br>
 
 <img src="img/bundle2g.png" alt="speed with bundled client-side JavaScript 2G" height="300px">
 <img src="img/bundle4g.png" alt="speed with bundled client-side JavaScript 4G" height="300px">
+
+I also checked [lighthouse](https://developers.google.com/web/tools/lighthouse/) again:
+<img src="img/lhbundle.png" alt="Lighthouse test bundled javascript" height="300px">
+---
