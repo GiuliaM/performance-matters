@@ -5,15 +5,14 @@ This project is about displaying movies from the Movie Database API.
 For starters I put the search query on John, only displaying the movies with the name John in the title.
 By clicking on the movie you will get the details from this movie.
 
-<img src="img/search.png" alt="Search with results"/>
-
 This whole project is build in server-side, with a few client-side javascripts. I'm going to bundle these client-side script with [Browserify](https://www.npmjs.com/package/browserify).
 
 
 ### Features
-- Search by query
+- View moviedetails
 
 ### Wishlist
+- Add search query
 - Show more movies (now 20)
 - 404 handling
 
@@ -56,10 +55,27 @@ node app.js
 ```
 
 ## Audit
-Before adding any client-side JavaScript I did a speed check
-<img src="img/StartStatus.png" alt="speed without client-side JavaScript" height="400px">
+Before adding any client-side JavaScript I did two speed checks:
 
-After that the two client-side JavaScripts
+#### Regular 2G (300ms, 250Kb/s, 50Kb/s)
+*Status*
+Transferred: 1.4 MB
+Finish: 49.91 s
+DOMContentLoaded: 1.07 s
+Load: 49.92 s
+
+#### Regular 4G (20ms, 4.0Mb/s, 3.0Mb/s)
+*Status*
+Transferred: 1.4 MB
+Finish: 4.74 s
+DOMContentLoaded: 704 ms
+Load: 3.71 s
+
+<img src="img/nojs2g.png" alt="speed without client-side JavaScript 2G" height="300px">
+<img src="img/nojs2g.png" alt="speed without client-side JavaScript 2G" height="300px">
+
+I added the two client-side JavaScripts
 <img src="img/dateNameJsAdded.png" alt="speed with client-side JavaScript" height="400px">
 
-After that the two client-side JavaScripts bundled with Browserify stored in bundle.js
+Then I bundled the client-side JavaScripts with Browserify stored in bundle.js
+<img src="img/bundleJS.png" alt="speed with client-side JavaScript" height="300px">

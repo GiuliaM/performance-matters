@@ -1,2 +1,4 @@
-
 tmdb-api/static/config.js
+node_modules/
+
+.env
