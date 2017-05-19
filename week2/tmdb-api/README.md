@@ -72,10 +72,42 @@ DOMContentLoaded: 704 ms<br>
 Load: 3.71 s<br>
 
 <img src="img/nojs2g.png" alt="speed without client-side JavaScript 2G" height="300px">
-<img src="img/nojs2g.png" alt="speed without client-side JavaScript 2G" height="300px">
+<img src="img/nojs4g.png" alt="speed without client-side JavaScript 4G" height="300px">
 
-I added the two client-side JavaScripts
-<img src="img/dateNameJsAdded.png" alt="speed with client-side JavaScript" height="400px">
+I added the two client-side JavaScripts:
+
+**Regular 2G (300ms, 250Kb/s, 50Kb/s)**<br>
+**Status**<br>
+Transferred: 1.4 MB<br>
+Finish: 50.11 s<br>
+DOMContentLoaded: 1.79 s<br>
+Load: 50.12 s<br>
+
+**Regular 4G (20ms, 4.0Mb/s, 3.0Mb/s)**<br>
+**Status**<br>
+Transferred: 1.4 MB<br>
+Finish: 4.79 s<br>
+DOMContentLoaded: 948 ms<br>
+Load: 3.76 s<br>
+
+<img src="img/2js2g.png" alt="speed with client-side JavaScript 2G" height="300px">
+<img src="img/2js4g.png" alt="speed with client-side JavaScript 4G" height="300px">
 
 Then I bundled the client-side JavaScripts with Browserify stored in bundle.js
-<img src="img/bundleJS.png" alt="speed with client-side JavaScript" height="300px">
+
+**Regular 2G (300ms, 250Kb/s, 50Kb/s)**<br>
+**Status**<br>
+Transferred: 1.4 MB<br>
+Finish: 49.43 s<br>
+DOMContentLoaded: 1.36 s<br>
+Load: 49.43 s<br>
+
+**Regular 4G (20ms, 4.0Mb/s, 3.0Mb/s)**<br>
+**Status**<br>
+Transferred: 1.4 MB<br>
+Finish: 5.11 s<br>
+DOMContentLoaded: 879 ms<br>
+Load: 4.07 s<br>
+
+<img src="img/bundle2g.png" alt="speed with bundled client-side JavaScript 2G" height="300px">
+<img src="img/bundle4g.png" alt="speed with bundled client-side JavaScript 4G" height="300px">
