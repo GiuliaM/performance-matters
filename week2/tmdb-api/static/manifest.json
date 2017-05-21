@@ -1,13 +1,13 @@
 {
-  "name": "Twitter Bootstrap documentation",
-  "short_name": "Bootstrap",
+  "name": "Moodvie, the mood related moviefinder",
+  "short_name": "Moodvie",
   "display": "standalone",
-  "start_url": "/?homescreen=1",
+  "start_url": "/movie",
   "background_color": "#333333",
   "theme_color": "#1EB4F4",
   "icons": [
     {
-      "src": "/apple-touch-icon.png",
+      "src": "img/icon.png",
       "sizes": "180x180",
       "type": "image/png"
     }

@@ -1,16 +1,17 @@
-<!--
 <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-        .then(function(registration){
-            console.log("SW Registered");
-        })
-        .catch(function(err){
-            console.log("SW Registered Failed"+ err);
-        })
-}
+    if ('serviceWorker' in navigator) {
+         window.addEventListener('load', function() {
+            navigator.serviceWorker
+                .register('/sw.js')
+                .then(function(registration) { //if registration is succesful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch(function(err) { //if registration failed
+                        console.log('ServiceWorker registration failed: ', err);
+                });
+         });
+    }
 </script>
--->
+
 <script src="/static/bundle.js"></script>
 
 </body>

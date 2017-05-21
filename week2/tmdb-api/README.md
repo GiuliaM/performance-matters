@@ -75,6 +75,7 @@ Load: 3.71 s<br>
 <img src="img/nojs4g.png" alt="speed without client-side JavaScript 4G" height="300px">
 
 I also did a check with [lighthouse](https://developers.google.com/web/tools/lighthouse/):
+
 <img src="img/lhnojs.png" alt="Lighthouse test no javascript" height="300px">
 
 ---
@@ -98,6 +99,7 @@ Load: 3.76 s<br>
 <img src="img/2js4g.png" alt="speed with client-side JavaScript 4G" height="300px">
 
 I also checked [lighthouse](https://developers.google.com/web/tools/lighthouse/) again:
+
 <img src="img/lh2js.png" alt="Lighthouse test two javascript" height="300px">
 ---
 Then I bundled the client-side JavaScripts with Browserify stored in bundle.js
@@ -120,5 +122,60 @@ Load: 4.07 s<br>
 <img src="img/bundle4g.png" alt="speed with bundled client-side JavaScript 4G" height="300px">
 
 I also checked [lighthouse](https://developers.google.com/web/tools/lighthouse/) again:
+
 <img src="img/lhbundle.png" alt="Lighthouse test bundled javascript" height="300px">
 ---
+
+After that I installed a serviceworker to cache scripts and images.
+
+**Regular 2G (300ms, 250Kb/s, 50Kb/s)**<br>
+**Status**<br>
+Transferred: 564 B<br>
+Finish: 1.35 s<br>
+DOMContentLoaded: 1.26 s<br>
+Load: 1.36 s<br>
+
+**Regular 4G (20ms, 4.0Mb/s, 3.0Mb/s)**<br>
+**Status**<br>
+Transferred: 564 B<br>
+Finish: 352 ms<br>
+DOMContentLoaded: 310 ms<br>
+Load: 367 ms<br>
+
+<img src="img/swsecondload2G.png" alt="speed with serviceworker activated 2G" height="300px">
+<img src="img/swsecondload4G.png" alt="speed with serviceworker activated 4G" height="300px">
+
+I also checked [lighthouse](https://developers.google.com/web/tools/lighthouse/) again:
+
+<img src="img/lhsw.png" alt="Lighthouse test serviceworker activated" height="300px">
+
+---
+
+## Conclusion
+For the client-side JavaScript I had, it wasn't necessary to use Browserify. But adding the service worker had great impact. With 2G I saved about 48 seconds on the loading time and with 4G I saved about 3.4 seconds. Overal I improved the performance with 30%.
+
+**Regular 2G (300ms, 250Kb/s, 50Kb/s)**<br>
+**Before**<br>
+Transferred: 1.4 MB<br>
+Finish: 49.91 s<br>
+DOMContentLoaded: 1.07 s<br>
+Load: 49.92 s<br>
+
+**After**<br>
+Transferred: 564 B<br>
+Finish: 1.35 s<br>
+DOMContentLoaded: 1.26 s<br>
+Load: 1.36 s<br>
+
+**Regular 4G (20ms, 4.0Mb/s, 3.0Mb/s)**<br>
+**Before**<br>
+Transferred: 1.4 MB<br>
+Finish: 4.74 s<br>
+DOMContentLoaded: 704 ms<br>
+Load: 3.71 s<br>
+
+**After**<br>
+Transferred: 564 B<br>
+Finish: 352 ms<br>
+DOMContentLoaded: 310 ms<br>
+Load: 367 ms<br>
